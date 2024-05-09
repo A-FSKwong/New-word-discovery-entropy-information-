@@ -7,7 +7,19 @@ f = open(r'C:\a.txt', 'r', encoding='utf-8') #读取文章
 s = f.read() #读取为一个字符串
 
 #定义要去掉的标点字
-drop_dict = [u'，', u'\n', u'。', u'、', u'：', u'(', u')', u'[', u']', u'.', u',', u' ', u'\u3000', u'”', u'“', u'？', u'?', u'！', u'‘', u'’', u'…']
+drop_dict = [u'，', u'\n', u'。', u'、', u'：', u'(', u')', u'[', u']', u'.', u',', u' ', 
+             u'1', u'2', u'3', u'4', u'5', u'6', u'7', u'8', u'9', u'0',
+             u'-', u'—', u'"', u'*', u'/', u':', u'@', u'～', u'《', u'》',
+             u'『', u'』', u'+', u'○', u'◎', u'０', u'〇', u'２', u'4', u'５',
+             u'６', u'８', u'9', u'a', u'A', u'B', u'b', u'c', u'C', u'd',
+             u'e', u'E', u'f', u'F', u'g', u'h', u'H', u'i', u'j', u'k',
+             u'l', u'L', u'm', u'M', u'n', u'N', u'o', u'p', u'P', u'Q',
+             u'q', u'r', u'R', u's', u'S', u't', u'T', u'u', u'U', u'v',
+             u'V', u'w', u'x', u'y', u'Y', u'Z', u'G', u'D', u'I', u'J',
+             u'K', u'O', u'X', u';', u'&', u'%', u'$', u'、', u'。', u'，',u'（', u'）', u'；', u'４', 
+             u'\u3000', u'”', u'“', u'？', u'?', u'！', u'‘', u'’', u'…', u'「', u'」']
+
+
 for i in drop_dict: #去掉标点字
     s = s.replace(i, '')
 
